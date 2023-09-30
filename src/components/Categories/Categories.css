@@ -1,0 +1,12 @@
+.categories-container .col .content h4{
+    @apply text-sm font-light;
+}
+.categories-container .col h4{
+    @apply text-base font-semibold;
+}
+.categories-container .col .content{
+    @apply flex flex-col items-start gap-1 mt-4;
+}
+.categories-container .col{
+    @apply flex flex-col gap-6;
+}

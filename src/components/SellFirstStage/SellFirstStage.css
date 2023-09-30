@@ -1,0 +1,6 @@
+.categ-item{
+    @apply w-full flex items-center justify-between px-4 py-4 border font-normal text-base  hover:bg-slate-200 cursor-pointer;
+}
+.item-sub{
+    @apply w-full flex px-4 py-4 border font-normal text-base hover:bg-slate-200 cursor-pointer;
+}

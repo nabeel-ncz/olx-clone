@@ -1,0 +1,15 @@
+.nav-container{
+    @apply flex items-center py-1 px-6 border-2 bg-slate-50 z-40 mt-[5rem];
+}
+.categ-dropdown{
+    @apply flex items-center justify-center gap-1;
+}
+.nav-links{
+    @apply flex overflow-x-scroll gap-8 px-4;
+}
+.link-item{
+    @apply text-sm font-light hover:text-blue-500 cursor-pointer;
+}
+.nav-links::-webkit-scrollbar{
+    display: none;
+}
