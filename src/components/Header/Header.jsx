@@ -54,12 +54,12 @@ const Header = () => {
                 </div>
                 <div className="login-btn">
                     {
-                        user.name
+                        user?.name
                         ? 
                         <div className="user-profile flex gap-2 items-center justify-center" onClick={handleProfile}>
                             <img src="https://cdn-icons-png.flaticon.com/512/666/666201.png" alt="" className="w-8" />
                             <img src="icons/down-arrow.png" alt="" className={`w-8 ${isProfileClicked && "rotate-180"} transition duration-500 ease-in-out`} />
-                            {isProfileClicked && <ProfileTooltip handleLogout={handleLogout} username={user.name} />}
+                            {isProfileClicked && <ProfileTooltip handleLogout={handleLogout} username={user.name} userId={user.userId} />}
                         </div>
                         : <button className="underline underline-offset-2" onClick={handleOpen}>Login</button>
                     }

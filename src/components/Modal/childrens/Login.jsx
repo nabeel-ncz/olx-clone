@@ -43,7 +43,7 @@ const Login = () => {
                 <h4 className="w-full text-center font-medium text-xl">Log In</h4>
                 <form action="" className="flex flex-col w-full gap-4" onSubmit={handleFormSubmit}>
                     <input type="text" name="email" value={form.email} placeholder="Email" onChange={setForm} className="w-full border-2 border-black rounded px-4 py-2" />
-                    <input type="text" name="password" value={form.password} placeholder="Password" onChange={setForm} className="w-full border-2 border-black rounded px-4 py-2" />
+                    <input type="password" name="password" value={form.password} placeholder="Password" onChange={setForm} className="w-full border-2 border-black rounded px-4 py-2" />
                     <button type="submit" className="text-center bg-slate-800 rounded font-medium py-2 text-white">submit</button>
                 </form>
             </div>

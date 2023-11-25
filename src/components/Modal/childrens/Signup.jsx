@@ -52,7 +52,7 @@ const Signup = () => {
                     <input type="text" name="username" value={form.username} onChange={setForm} placeholder="Username" className="w-full border-2 border-black rounded px-4 py-2" />
                     <input type="text" name="email" value={form.email} onChange={setForm} placeholder="Email" className="w-full border-2 border-black rounded px-4 py-2" />
                     <input type="text" name="phone" value={form.phone} onChange={setForm} placeholder="Phone" className="w-full border-2 border-black rounded px-4 py-2" />
-                    <input type="text" name="password" value={form.password} onChange={setForm} placeholder="Password" className="w-full border-2 border-black rounded px-4 py-2" />
+                    <input type="password" name="password" value={form.password} onChange={setForm} placeholder="Password" className="w-full border-2 border-black rounded px-4 py-2" />
                     <button type="submit" className="text-center bg-slate-800 rounded font-medium py-2 text-white">submit</button>
                 </form>
             </div>

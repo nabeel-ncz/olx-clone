@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ProfileTooltip.css";
 
-const ProfileTooltip = ({ handleLogout, username }) => {
+const ProfileTooltip = ({ handleLogout, username, userId }) => {
     const navigate = useNavigate();
     return (
         <div className="tooltip-container">
@@ -14,7 +14,7 @@ const ProfileTooltip = ({ handleLogout, username }) => {
                 <h6 className="text-center">View and edit profile</h6>
             </div>
             <div className="tooltip-items border-b-2 w-full">
-                <div className="item" onClick={() => navigate('/mypost')}>
+                <div className="item" onClick={() => navigate(`/mypost/${userId}`)}>
                     <img src="icons/favorite.png" alt="" className="w-5" />
                     <h4>My Post</h4>
                 </div>

@@ -1,8 +1,16 @@
-import React from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import "./Card.css"
 import { useNavigate } from "react-router-dom";
+import Heart from "../Heart/Heart";
+import { firebaseContext } from "../../store/firebaseContext";
 
 const Card = ({ isFeatured, imageUrl, title, price, createdAt, productId }) => {
+    const [status, setStatus] = useState(false);
+    const user = useContext(firebaseContext);
+    useEffect(() => {
+        const isProductInWishlist = user?.wishlist?.includes(productId);
+        setStatus(isProductInWishlist);
+    }, [productId, user?.wishlist])
     const navigate = useNavigate();
     const handleCardNavigate = () => {
         navigate(`/product?id=${productId}`);
@@ -18,9 +26,7 @@ const Card = ({ isFeatured, imageUrl, title, price, createdAt, productId }) => {
                             <span className="font-normal text-[10px]">FEATURED</span>
                         </span>
                     }
-                    <span className="like-btn absolute top-0 right-0 bg-slate-50 p-1 rounded-full flex items-center justify-center m-1">
-                        <img src="icons/love.png" alt="" className="w-7" />
-                    </span>
+                    <Heart productId={productId} wishStatus={status} />
                 </div>
                 <div className="card-description pt-4 pb-1 px-2">
                     <h4 className="text-lg">₹ {price}</h4>
